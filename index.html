@@ -280,18 +280,18 @@
         </div>
         <div class="form-row">
             <label for="zip-code">Zip Code<span aria-hidden="true">*</span></label>
-            <input type="text" id="zip-code" name="zid-code" required maxlength="5" pattern="/[0-9]{5}/">
+            <input type="text" id="zip-code" name="zid-code" required maxlength="5" pattern="[0-9]{5}">
             <span class="error" aria-live="polite"></span>
         </div>
         <div class="form-row">
             <label for="password">Password<span aria-hidden="true">*</span></label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$">
             <span class="error" aria-live="polite"></span>
         </div>
         <div class="form-row">
             <label for="password">Confirm Password<span aria-hidden="true">*</span></label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            <span class="error" aria-live="polite">Passwords don't match!</span>
+            <input type="password" id="confirm-password" name="confirm-password" required minlength="8">
+            <span class="error" aria-live="polite"></span>
         </div>
         <button type="submit">Submit</button>
     </form>
